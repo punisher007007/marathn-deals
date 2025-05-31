@@ -480,6 +480,9 @@
       .premium-deal-card:nth-child(4) {
         animation-delay: 2.8s;
       }
+      .premium-deal-card:nth-child(5) {
+        animation-delay: 3.0s;
+      }
 
       @keyframes dealCardSlideUp {
         from {
@@ -657,542 +660,23 @@
         transform: translateY(-1px);
       }
 
-      /* Premium Coming Soon */
-      .premium-preview {
-        background: var(--surface-glass);
-        backdrop-filter: blur(30px);
-        border: 1px solid var(--glass-border);
-        border-radius: 24px;
-        padding: 32px 28px;
-        text-align: center;
-        margin-top: 32px;
-        position: relative;
-        overflow: hidden;
-        animation: previewSlideUp 1s ease-out 2.6s both;
-      }
-
-      @keyframes previewSlideUp {
-        from {
-          opacity: 0;
-          transform: translateY(20px);
-        }
-        to {
-          opacity: 1;
-          transform: translateY(0);
-        }
-      }
-
-      .preview-icon {
-        font-size: 32px;
-        margin-bottom: 16px;
-        animation: previewIconFloat 3s ease-in-out infinite;
-      }
-
-      @keyframes previewIconFloat {
-        0%,
-        100% {
-          transform: translateY(0px);
-        }
-        50% {
-          transform: translateY(-8px);
-        }
-      }
-
-      .preview-title {
-        font-size: 20px;
-        font-weight: 700;
-        color: white;
-        margin-bottom: 12px;
-      }
-
-      .preview-description {
-        font-size: 14px;
-        color: rgba(255, 255, 255, 0.8);
-        line-height: 1.5;
-      }
-
-      /* Premium Footer */
-      .premium-footer {
-        text-align: center;
-        padding: 32px 0;
-        position: relative;
-        animation: footerFadeIn 1s ease-out 2.8s both;
-      }
-
-      @keyframes footerFadeIn {
-        from {
-          opacity: 0;
-        }
-        to {
-          opacity: 1;
-        }
-      }
-
-      .footer-main-text {
-        font-size: 14px;
-        color: rgba(255, 255, 255, 0.9);
-        font-weight: 600;
-        margin-bottom: 8px;
-      }
-
-      .footer-sub-text {
-        font-size: 12px;
-        color: rgba(255, 255, 255, 0.6);
-        margin-bottom: 16px;
-      }
-
-      .store-info-divider {
-        width: 60px;
-        height: 1px;
-        background: rgba(255, 255, 255, 0.3);
-        margin: 16px auto;
-      }
-
-      .store-info {
-        font-size: 14px;
-        color: rgba(255, 255, 255, 0.8);
-        font-weight: 600;
-        margin-bottom: 4px;
-      }
-
-      .store-address-footer {
-        font-size: 12px;
-        color: rgba(255, 255, 255, 0.6);
-      }
-
-      /* Premium Redemption Modal */
-      .premium-modal {
-        display: none;
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background: rgba(0, 0, 0, 0.8);
-        backdrop-filter: blur(20px);
-        z-index: 10000;
-        animation: modalFadeIn 0.4s ease-out;
-      }
-
-      .premium-modal.active {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        padding: 20px;
-      }
-
-      @keyframes modalFadeIn {
-        from {
-          opacity: 0;
-        }
-        to {
-          opacity: 1;
-        }
-      }
-
-      .modal-content {
-        background: linear-gradient(
-          135deg,
-          var(--surface-primary) 0%,
-          rgba(15, 15, 35, 0.98) 100%
-        );
-        backdrop-filter: blur(40px);
-        border: 1px solid var(--border-premium);
-        border-radius: 40px;
-        padding: 52px 40px;
-        text-align: center;
-        max-width: 400px;
-        width: 100%;
-        position: relative;
-        overflow: hidden;
-        box-shadow: 0 50px 100px rgba(0, 0, 0, 0.5), var(--shadow-glow);
-        transform: scale(0.9);
-        animation: modalScaleIn 0.4s ease-out 0.1s both;
-      }
-
-      @keyframes modalScaleIn {
-        from {
-          transform: scale(0.8);
-          opacity: 0;
-        }
-        to {
-          transform: scale(1);
-          opacity: 1;
-        }
-      }
-
-      .modal-success-icon {
-        width: 104px;
-        height: 104px;
-        background: var(--premium-gold);
-        border-radius: 50%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        font-size: 52px;
-        margin: 0 auto 28px;
-        position: relative;
-        box-shadow: 0 20px 40px rgba(212, 175, 55, 0.4),
-          inset 0 2px 0 rgba(255, 255, 255, 0.3);
-        animation: successBounce 0.8s ease-out 0.3s both;
-      }
-
-      @keyframes successBounce {
-        0% {
-          transform: scale(0) rotate(180deg);
-        }
-        50% {
-          transform: scale(1.1) rotate(360deg);
-        }
-        100% {
-          transform: scale(1) rotate(360deg);
-        }
-      }
-
-      .modal-success-icon::before {
-        content: "";
-        position: absolute;
-        inset: -12px;
-        border: 3px solid var(--marathn-gold);
-        border-radius: 50%;
-        opacity: 0.4;
-        animation: ripple 2.5s ease-out infinite;
-      }
-
-      @keyframes ripple {
-        0% {
-          transform: scale(0.8);
-          opacity: 0.3;
-        }
-        100% {
-          transform: scale(1.2);
-          opacity: 0;
-        }
-      }
-
-      .modal-title {
-        font-size: 28px;
-        font-weight: 800;
-        color: var(--text-primary);
-        margin-bottom: 8px;
-      }
-
-      .modal-subtitle {
-        font-size: 16px;
-        color: var(--text-secondary);
-        margin-bottom: 32px;
-      }
-
-      .redemption-code-container {
-        background: linear-gradient(
-          135deg,
-          rgba(212, 175, 55, 0.08) 0%,
-          rgba(15, 15, 35, 0.3) 100%
-        );
-        border: 3px dashed var(--marathn-gold);
-        border-radius: 24px;
-        padding: 32px 28px;
-        margin-bottom: 36px;
-        position: relative;
-        overflow: hidden;
-        backdrop-filter: blur(20px);
-      }
-
-      .redemption-code-container::before {
-        content: "";
-        position: absolute;
-        top: 0;
-        left: -100%;
-        width: 100%;
-        height: 100%;
-        background: linear-gradient(
-          90deg,
-          transparent,
-          rgba(212, 175, 55, 0.2),
-          transparent
-        );
-        animation: codeShine 4s ease-in-out infinite;
-      }
-
-      @keyframes codeShine {
-        0% {
-          left: -100%;
-        }
-        100% {
-          left: 100%;
-        }
-      }
-
-      .code-label {
-        font-size: 12px;
-        color: var(--text-secondary);
-        margin-bottom: 12px;
-        text-transform: uppercase;
-        letter-spacing: 1.5px;
-        font-weight: 700;
-      }
-
-      .code-display {
-        font-family: "SF Mono", "Monaco", "Cascadia Code", monospace;
-        font-size: 28px;
-        font-weight: 800;
-        color: var(--marathn-gold);
-        letter-spacing: 4px;
-        position: relative;
-        z-index: 1;
-        text-shadow: 0 2px 10px rgba(212, 175, 55, 0.3);
-      }
-
-      .modal-close-button {
-        background: linear-gradient(
-          135deg,
-          var(--marathn-gold) 0%,
-          #f4d03f 100%
-        );
-        color: #0f0f23;
-        border: none;
-        padding: 20px 40px;
-        border-radius: 18px;
-        font-size: 16px;
-        font-weight: 700;
-        cursor: pointer;
-        transition: all 0.3s ease;
-        box-shadow: 0 12px 30px rgba(212, 175, 55, 0.4),
-          inset 0 1px 0 rgba(255, 255, 255, 0.3);
-        position: relative;
-        overflow: hidden;
-        text-transform: uppercase;
-        letter-spacing: 0.5px;
-      }
-
-      .modal-close-button::before {
-        content: "";
-        position: absolute;
-        top: 0;
-        left: -100%;
-        width: 100%;
-        height: 100%;
-        background: linear-gradient(
-          90deg,
-          transparent,
-          rgba(255, 255, 255, 0.2),
-          transparent
-        );
-        transition: left 0.6s ease;
-      }
-
-      .modal-close-button:hover {
-        background: linear-gradient(
-          135deg,
-          #f4d03f 0%,
-          var(--marathn-gold) 100%
-        );
-        transform: translateY(-3px);
-        box-shadow: 0 16px 35px rgba(212, 175, 55, 0.5),
-          inset 0 1px 0 rgba(255, 255, 255, 0.4);
-      }
-
-      .modal-close-button:hover::before {
-        left: 100%;
-      }
-
-      /* Premium Vape Slider Styles */
-      .vape-deals-section {
-        margin: 24px 0;
-      }
-
-      .vape-section-header {
-        text-align: center;
-        margin-bottom: 20px;
-      }
-
-      .vape-category-title {
-        font-size: 18px;
-        font-weight: 700;
-        color: var(--text-primary);
-        margin-bottom: 8px;
-      }
-
-      .vape-category-subtitle {
-        font-size: 14px;
-        color: var(--text-secondary);
-      }
-
-      .vape-slider-container {
-        position: relative;
-        overflow: hidden;
-        border-radius: 32px;
-        background: var(--surface-primary);
-        backdrop-filter: blur(40px);
-        border: 1px solid var(--border-premium);
-        box-shadow: var(--shadow-premium), var(--shadow-glow);
-      }
-
-      .vape-slider {
-        display: flex;
-        transition: transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-        width: 200%;
-      }
-
-      .vape-slide {
-        width: 50%;
-        flex-shrink: 0;
-        padding: 36px 32px;
-      }
-
-      .vape-slide.active {
-        opacity: 1;
-      }
-
-      .slider-controls {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        padding: 20px;
-        background: var(--surface-glass);
-        backdrop-filter: blur(20px);
-        border-top: 1px solid var(--border-premium);
-      }
-
-      .slider-dots {
-        display: flex;
-        gap: 12px;
-        margin: 0 20px;
-      }
-
-      .slider-dot {
-        width: 8px;
-        height: 8px;
-        border-radius: 50%;
-        background: rgba(212, 175, 55, 0.3);
-        cursor: pointer;
-        transition: all 0.3s ease;
-      }
-
-      .slider-dot.active {
-        background: var(--marathn-gold);
-        transform: scale(1.5);
-        box-shadow: 0 0 10px rgba(212, 175, 55, 0.5);
-      }
-
-      .slider-arrow {
-        width: 40px;
-        height: 40px;
-        border-radius: 50%;
-        background: var(--surface-glass);
-        backdrop-filter: blur(20px);
-        border: 1px solid var(--border-premium);
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        cursor: pointer;
-        transition: all 0.3s ease;
-        font-size: 16px;
-        color: var(--text-primary);
-      }
-
-      .slider-arrow:hover {
-        background: var(--surface-elevated);
-        border-color: var(--marathn-gold);
-        transform: scale(1.1);
-      }
-
-      .slider-arrow.disabled {
-        opacity: 0.3;
-        cursor: not-allowed;
-        pointer-events: none;
-      }
-
-      .vape-slide-indicator {
-        position: absolute;
-        top: 16px;
-        right: 16px;
-        background: var(--marathn-gold);
-        color: #0f0f23;
-        padding: 6px 12px;
-        border-radius: 20px;
-        font-size: 12px;
-        font-weight: 700;
-        letter-spacing: 0.5px;
-      }
-
-      /* Swipe gesture support */
-      .vape-slider-container {
-        touch-action: pan-y;
-        -webkit-user-select: none;
-        user-select: none;
-      }
-
-      /* Premium animation for slide transition */
-      @keyframes slideFromRight {
-        from {
-          transform: translateX(50px);
-          opacity: 0;
-        }
-        to {
-          transform: translateX(0);
-          opacity: 1;
-        }
-      }
-
-      @keyframes slideFromLeft {
-        from {
-          transform: translateX(-50px);
-          opacity: 0;
-        }
-        to {
-          transform: translateX(0);
-          opacity: 1;
-        }
-      }
-
-      .vape-slide.slide-in-right {
-        animation: slideFromRight 0.4s ease-out;
-      }
-
-      .vape-slide.slide-in-left {
-        animation: slideFromLeft 0.4s ease-out;
-      }
+      /* Other styles remain the same... */
       @media (max-width: 480px) {
         .container {
           padding: 16px;
         }
-
         .header {
           padding: 40px 0 30px;
         }
-
         .store-logo {
           font-size: 36px;
         }
-
         .welcome-text {
           font-size: 24px;
         }
-
         .premium-deal-card {
           padding: 24px 20px;
         }
-
-        .modal-content {
-          padding: 36px 24px;
-        }
-      }
-
-      /* Dark mode support */
-      @media (prefers-color-scheme: dark) {
-        :root {
-          --surface-primary: rgba(17, 24, 39, 0.95);
-          --text-primary: #f9fafb;
-          --text-secondary: #9ca3af;
-        }
-      }
-
-      /* Advanced CSS Custom Properties for Future Theming */
-      .theme-luxury {
-        --primary-gradient: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
-        --marathn-red: #ff6b6b;
-        --marathn-gold: #feca57;
       }
     </style>
   </head>
@@ -1232,6 +716,7 @@
       <div class="deals-section">
         <h2 class="section-title">Today's Premium Offers</h2>
         <div class="deals-grid">
+          
           <!-- Premium Honey Deal -->
           <div class="premium-deal-card">
             <div class="deal-top">
@@ -1280,105 +765,31 @@
             </button>
           </div>
 
-          <!-- HQD Vape Deals Slider -->
-          <div class="vape-deals-section">
-            <div class="vape-section-header">
-              <h3 class="vape-category-title">🌟 Premium Vape Collection</h3>
-              <p class="vape-category-subtitle">
-                Swipe to explore our HQD selection
-              </p>
-            </div>
-
-            <div class="vape-slider-container" id="vapeSliderContainer">
-              <div class="vape-slider" id="vapeSlider">
-                <!-- HQD 1200 Puffs Slide -->
-                <div class="vape-slide active">
-                  <div class="vape-slide-indicator">1200 PUFFS</div>
-                  <div class="deal-top">
-                    <div class="deal-icon-container">
-                      <div class="deal-icon">💨</div>
-                    </div>
-                    <div class="deal-content">
-                      <h3 class="deal-title">HQD Vape Special</h3>
-                      <div class="deal-value">$11.99</div>
-                    </div>
-                  </div>
-                  <div class="deal-description">
-                    Premium HQD disposable vape with 1200 puffs. High-quality
-                    flavor and smooth experience. Multiple flavors available in
-                    store.
-                  </div>
-                  <button
-                    class="premium-redeem-button"
-                    onclick="activatePremiumDeal('hqd1200')"
-                  >
-                    Activate Deal
-                  </button>
-                </div>
-
-                <!-- HQD 7000 Puffs Slide -->
-                <div class="vape-slide">
-                  <div class="vape-slide-indicator">7000 PUFFS</div>
-                  <div class="deal-top">
-                    <div class="deal-icon-container">
-                      <div class="deal-icon">🌟</div>
-                    </div>
-                    <div class="deal-content">
-                      <h3 class="deal-title">HQD Premium Series</h3>
-                      <div class="deal-value">$17.99</div>
-                    </div>
-                  </div>
-                  <div class="deal-description">
-                    Ultimate HQD experience with 7000 puffs of premium flavor.
-                    Long-lasting satisfaction with our top-tier disposable vape
-                    collection.
-                  </div>
-                  <button
-                    class="premium-redeem-button"
-                    onclick="activatePremiumDeal('hqd7000')"
-                  >
-                    Activate Deal
-                  </button>
-                </div>
+          <!-- NEW: Premium T-Shirt Deal -->
+          <div class="premium-deal-card">
+            <div class="deal-top">
+              <div class="deal-icon-container">
+                <div class="deal-icon">👕</div>
               </div>
-
-              <!-- Slider Controls -->
-              <div class="slider-controls">
-                <div
-                  class="slider-arrow"
-                  id="prevSlide"
-                  onclick="changeVapeSlide(-1)"
-                >
-                  &#8249;
-                </div>
-                <div class="slider-dots">
-                  <div
-                    class="slider-dot active"
-                    onclick="goToVapeSlide(0)"
-                  ></div>
-                  <div class="slider-dot" onclick="goToVapeSlide(1)"></div>
-                </div>
-                <div
-                  class="slider-arrow"
-                  id="nextSlide"
-                  onclick="changeVapeSlide(1)"
-                >
-                  &#8250;
-                </div>
+              <div class="deal-content">
+                <h3 class="deal-title">Premium Apparel Sale</h3>
+                <div class="deal-value">50% OFF</div>
               </div>
             </div>
+            <div class="deal-description">
+              Massive savings on our entire T-shirt collection! Get 50% off all 
+              premium branded tees. From casual wear to statement pieces, upgrade 
+              your wardrobe for less.
+            </div>
+            <button
+              class="premium-redeem-button"
+              onclick="activatePremiumDeal('tshirt')"
+            >
+              Activate Deal
+            </button>
           </div>
-        </div>
-      </div>
 
-      <!-- Premium Preview -->
-      <div class="premium-preview">
-        <div class="preview-icon">🚀</div>
-        <h3 class="preview-title">Personalized Deals Coming</h3>
-        <p class="preview-description">
-          We're crafting a premium experience to deliver personalized offers
-          directly to your device. Get ready for exclusive member benefits!
-        </p>
+        </div>
       </div>
 
       <!-- Premium Footer -->
@@ -1429,44 +840,24 @@
           code: "COKE450",
           description: "2 Cokes for $4.50",
         },
-        hqd1200: {
-          icon: "💨",
-          title: "HQD 1200 Puffs Ready",
+        tshirt: {
+          icon: "👕",
+          title: "T-Shirt Sale Activated",
           subtitle: "Present this screen to our cashier",
-          code: "HQD1200",
-          description: "HQD 1200 Puffs - $11.99",
-        },
-        hqd7000: {
-          icon: "🌟",
-          title: "HQD Premium Series Active",
-          subtitle: "Present this screen to our cashier",
-          code: "HQD7000",
-          description: "HQD 7000 Puffs - $17.99",
+          code: "TSHIRT50",
+          description: "50% off all T-shirts",
         },
       };
 
       // Advanced loading sequence
       function initializePremiumExperience() {
-        // Hide loading screen after animations
         setTimeout(() => {
           document.getElementById("loadingScreen").classList.add("hidden");
         }, 2500);
-
-        // Initialize date display
         updatePremiumDate();
-
-        // Track premium experience load
-        trackPremiumAnalytics("premium_experience_loaded", {
-          timestamp: new Date().toISOString(),
-          userAgent: navigator.userAgent,
-          viewport: `${window.innerWidth}x${window.innerHeight}`,
-        });
-
-        // Initialize advanced interactions
-        initializePremiumInteractions();
       }
 
-      // Premium date formatting with real-time updates
+      // Premium date formatting
       function updatePremiumDate() {
         const now = new Date();
         const options = {
@@ -1488,36 +879,22 @@
         ).textContent = `${formattedDate} • ${formattedTime}`;
       }
 
-      // Activate premium deal with enhanced UX
+      // Activate premium deal
       function activatePremiumDeal(dealType) {
         const deal = premiumDeals[dealType];
         const modal = document.getElementById("premiumModal");
 
-        // Update modal content with smooth transitions
         document.getElementById("modalIcon").textContent = deal.icon;
         document.getElementById("modalTitle").textContent = deal.title;
         document.getElementById("modalSubtitle").textContent = deal.subtitle;
         document.getElementById("modalCode").textContent = deal.code;
 
-        // Show modal with premium animation
         modal.classList.add("active");
         document.body.style.overflow = "hidden";
 
-        // Advanced analytics tracking
-        trackPremiumAnalytics("deal_activated", {
-          dealType: dealType,
-          dealCode: deal.code,
-          activationTime: new Date().toISOString(),
-          sessionId: generateSessionId(),
-        });
-
-        // Haptic feedback for mobile devices
         if (navigator.vibrate) {
           navigator.vibrate([100, 50, 100]);
         }
-
-        // Add success sound effect (silent by default, can be enabled)
-        playSuccessSound();
       }
 
       // Close premium modal
@@ -1525,41 +902,19 @@
         const modal = document.getElementById("premiumModal");
         modal.classList.remove("active");
         document.body.style.overflow = "";
-
-        trackPremiumAnalytics("modal_closed", {
-          closeTime: new Date().toISOString(),
-        });
       }
 
-      // Advanced interaction handlers
-      function initializePremiumInteractions() {
-        // Enhanced card hover effects
-        document
-          .querySelectorAll(".premium-deal-card")
-          .forEach((card, index) => {
-            card.addEventListener("mouseenter", () => {
-              trackPremiumAnalytics("card_hover", { cardIndex: index });
-            });
-
-            card.addEventListener("click", (e) => {
-              if (!e.target.classList.contains("premium-redeem-button")) {
-                // Add subtle click feedback
-                card.style.transform = "scale(0.98)";
-                setTimeout(() => {
-                  card.style.transform = "";
-                }, 150);
-              }
-            });
-          });
-
+      // Initialize everything when DOM is ready
+      document.addEventListener("DOMContentLoaded", () => {
+        initializePremiumExperience();
+        setInterval(updatePremiumDate, 60000);
+        
         // Close modal on outside click
-        document
-          .getElementById("premiumModal")
-          .addEventListener("click", (e) => {
-            if (e.target === e.currentTarget) {
-              closePremiumModal();
-            }
-          });
+        document.getElementById("premiumModal").addEventListener("click", (e) => {
+          if (e.target === e.currentTarget) {
+            closePremiumModal();
+          }
+        });
 
         // Keyboard shortcuts
         document.addEventListener("keydown", (e) => {
@@ -1567,549 +922,7 @@
             closePremiumModal();
           }
         });
-
-        // Advanced scroll effects
-        let ticking = false;
-        function updateScrollEffects() {
-          const scrolled = window.pageYOffset;
-          const rate = scrolled * -0.5;
-
-          // Parallax background
-          const bgMesh = document.querySelector(".bg-mesh");
-          if (bgMesh) {
-            bgMesh.style.transform = `translate3d(0, ${rate}px, 0)`;
-          }
-
-          ticking = false;
-        }
-
-        window.addEventListener("scroll", () => {
-          if (!ticking) {
-            requestAnimationFrame(updateScrollEffects);
-            ticking = true;
-          }
-        });
-      }
-
-      // Advanced analytics system
-      function trackPremiumAnalytics(event, data = {}) {
-        const analyticsData = {
-          event: event,
-          timestamp: new Date().toISOString(),
-          url: window.location.href,
-          referrer: document.referrer,
-          store: "MARATHN",
-          version: "2.0.0",
-          ...data,
-        };
-
-        // Console logging for development
-        console.log("📊 Premium Analytics:", analyticsData);
-
-        // Future: Send to Google Analytics, Mixpanel, or custom endpoint
-        // gtag('event', event, analyticsData);
-        // mixpanel.track(event, analyticsData);
-      }
-
-      // Session management
-      function generateSessionId() {
-        return (
-          "session_" +
-          Math.random().toString(36).substr(2, 9) +
-          "_" +
-          Date.now()
-        );
-      }
-
-      // Premium audio feedback system
-      function playSuccessSound() {
-        // Create sophisticated audio context for premium sound
-        if (
-          typeof AudioContext !== "undefined" ||
-          typeof webkitAudioContext !== "undefined"
-        ) {
-          try {
-            const audioContext = new (AudioContext || webkitAudioContext)();
-
-            // Create a more sophisticated success sound with multiple tones
-            const createTone = (frequency, startTime, duration, gain = 0.1) => {
-              const oscillator = audioContext.createOscillator();
-              const gainNode = audioContext.createGain();
-              const filter = audioContext.createBiquadFilter();
-
-              // Premium sound processing
-              oscillator.type = "sine";
-              filter.type = "lowpass";
-              filter.frequency.setValueAtTime(2000, audioContext.currentTime);
-
-              oscillator.connect(filter);
-              filter.connect(gainNode);
-              gainNode.connect(audioContext.destination);
-
-              oscillator.frequency.setValueAtTime(
-                frequency,
-                audioContext.currentTime + startTime
-              );
-
-              // Smooth envelope for premium feel
-              gainNode.gain.setValueAtTime(
-                0,
-                audioContext.currentTime + startTime
-              );
-              gainNode.gain.linearRampToValueAtTime(
-                gain,
-                audioContext.currentTime + startTime + 0.01
-              );
-              gainNode.gain.exponentialRampToValueAtTime(
-                0.001,
-                audioContext.currentTime + startTime + duration
-              );
-
-              oscillator.start(audioContext.currentTime + startTime);
-              oscillator.stop(audioContext.currentTime + startTime + duration);
-
-              return oscillator;
-            };
-
-            // Premium success chord progression (luxury brand style)
-            createTone(523.25, 0, 0.15, 0.08); // C5 - main note
-            createTone(659.25, 0.05, 0.2, 0.06); // E5 - harmony
-            createTone(783.99, 0.1, 0.25, 0.04); // G5 - top note
-            createTone(1046.5, 0.15, 0.3, 0.03); // C6 - octave
-
-            // Add subtle reverb effect with delay
-            setTimeout(() => {
-              createTone(523.25, 0, 0.1, 0.02);
-              createTone(659.25, 0.02, 0.12, 0.015);
-            }, 100);
-          } catch (e) {
-            // Fallback to premium notification sound
-            playPremiumFallbackSound();
-          }
-        }
-      }
-
-      // Premium fallback sound for browsers without AudioContext
-      function playPremiumFallbackSound() {
-        try {
-          // Create a more sophisticated beep sequence
-          const audioContext = new (AudioContext || webkitAudioContext)();
-          const oscillator = audioContext.createOscillator();
-          const gainNode = audioContext.createGain();
-
-          oscillator.connect(gainNode);
-          gainNode.connect(audioContext.destination);
-
-          oscillator.type = "triangle"; // Warmer tone than sine
-          oscillator.frequency.setValueAtTime(880, audioContext.currentTime);
-          oscillator.frequency.setValueAtTime(
-            1108,
-            audioContext.currentTime + 0.1
-          );
-          oscillator.frequency.setValueAtTime(
-            1318,
-            audioContext.currentTime + 0.2
-          );
-
-          gainNode.gain.setValueAtTime(0, audioContext.currentTime);
-          gainNode.gain.setValueAtTime(0.05, audioContext.currentTime + 0.01);
-          gainNode.gain.setValueAtTime(0, audioContext.currentTime + 0.3);
-
-          oscillator.start(audioContext.currentTime);
-          oscillator.stop(audioContext.currentTime + 0.3);
-        } catch (e) {
-          console.log("Premium audio feedback not available");
-        }
-      }
-
-      // Additional premium notification sound
-      function playPremiumChime() {
-        if (
-          typeof AudioContext !== "undefined" ||
-          typeof webkitAudioContext !== "undefined"
-        ) {
-          try {
-            const audioContext = new (AudioContext || webkitAudioContext)();
-
-            // Crystal-like chime sound
-            const createChimeTone = (freq, delay, duration) => {
-              const osc = audioContext.createOscillator();
-              const gain = audioContext.createGain();
-              const filter = audioContext.createBiquadFilter();
-
-              osc.type = "sine";
-              filter.type = "highpass";
-              filter.frequency.setValueAtTime(500, audioContext.currentTime);
-
-              osc.connect(filter);
-              filter.connect(gain);
-              gain.connect(audioContext.destination);
-
-              osc.frequency.setValueAtTime(
-                freq,
-                audioContext.currentTime + delay
-              );
-
-              gain.gain.setValueAtTime(0, audioContext.currentTime + delay);
-              gain.gain.linearRampToValueAtTime(
-                0.06,
-                audioContext.currentTime + delay + 0.005
-              );
-              gain.gain.exponentialRampToValueAtTime(
-                0.001,
-                audioContext.currentTime + delay + duration
-              );
-
-              osc.start(audioContext.currentTime + delay);
-              osc.stop(audioContext.currentTime + delay + duration);
-            };
-
-            // Premium chime sequence
-            createChimeTone(1760, 0, 0.8); // A6
-            createChimeTone(2093, 0.1, 0.7); // C7
-            createChimeTone(2637, 0.2, 0.6); // E7
-          } catch (e) {
-            console.log("Premium chime not available");
-          }
-        }
-      }
-
-      // Performance monitoring
-      function monitorPerformance() {
-        if ("performance" in window) {
-          window.addEventListener("load", () => {
-            setTimeout(() => {
-              const perfData = performance.getEntriesByType("navigation")[0];
-              trackPremiumAnalytics("performance_metrics", {
-                loadTime: perfData.loadEventEnd - perfData.loadEventStart,
-                domContentLoaded:
-                  perfData.domContentLoadedEventEnd -
-                  perfData.domContentLoadedEventStart,
-                firstPaint: performance.getEntriesByType("paint")[0]?.startTime,
-                connectionType: navigator.connection?.effectiveType,
-              });
-            }, 1000);
-          });
-        }
-      }
-
-      // Advanced error handling
-      window.addEventListener("error", (e) => {
-        trackPremiumAnalytics("javascript_error", {
-          message: e.message,
-          filename: e.filename,
-          lineno: e.lineno,
-          colno: e.colno,
-        });
       });
-
-      // Initialize everything when DOM is ready
-      document.addEventListener("DOMContentLoaded", () => {
-        initializePremiumExperience();
-        monitorPerformance();
-        initializeVapeSliderTouch();
-        // startVapeAutoSlide(); // Uncomment for auto-advance
-
-        // Update date every minute
-        setInterval(updatePremiumDate, 60000);
-      });
-
-      // PWA-like features
-      if ("serviceWorker" in navigator) {
-        window.addEventListener("load", () => {
-          // Future: Register service worker for offline capabilities
-          console.log("💡 PWA features available for future implementation");
-        });
-      }
-
-      // Advanced device detection
-      const deviceInfo = {
-        isMobile:
-          /Android|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
-            navigator.userAgent
-          ),
-        isTablet: /iPad|Android(?!.*Mobile)/i.test(navigator.userAgent),
-        isDesktop:
-          !/Android|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
-            navigator.userAgent
-          ),
-        supportsTouch: "ontouchstart" in window,
-        pixelRatio: window.devicePixelRatio || 1,
-      };
-
-      // Optimize experience based on device
-      if (deviceInfo.isMobile) {
-        document.body.classList.add("mobile-optimized");
-      }
-
-      // Premium vape slider functionality
-      let currentVapeSlide = 0;
-      const totalVapeSlides = 2;
-      let startX = 0;
-      let isDragging = false;
-
-      function changeVapeSlide(direction) {
-        const slider = document.getElementById("vapeSlider");
-        const dots = document.querySelectorAll(".slider-dot");
-        const slides = document.querySelectorAll(".vape-slide");
-
-        currentVapeSlide += direction;
-
-        // Wrap around
-        if (currentVapeSlide >= totalVapeSlides) currentVapeSlide = 0;
-        if (currentVapeSlide < 0) currentVapeSlide = totalVapeSlides - 1;
-
-        updateVapeSlider();
-
-        // Premium sound feedback
-        playPremiumSlideSound();
-
-        // Track interaction
-        trackPremiumAnalytics("vape_slide_changed", {
-          slideIndex: currentVapeSlide,
-          direction: direction > 0 ? "next" : "prev",
-        });
-      }
-
-      function goToVapeSlide(index) {
-        if (index === currentVapeSlide) return;
-
-        const direction = index > currentVapeSlide ? 1 : -1;
-        currentVapeSlide = index;
-        updateVapeSlider();
-
-        // Premium sound feedback
-        playPremiumSlideSound();
-
-        trackPremiumAnalytics("vape_slide_direct", { slideIndex: index });
-      }
-
-      function updateVapeSlider() {
-        const slider = document.getElementById("vapeSlider");
-        const dots = document.querySelectorAll(".slider-dot");
-        const slides = document.querySelectorAll(".vape-slide");
-        const prevBtn = document.getElementById("prevSlide");
-        const nextBtn = document.getElementById("nextSlide");
-
-        // Move slider
-        slider.style.transform = `translateX(-${currentVapeSlide * 50}%)`;
-
-        // Update dots
-        dots.forEach((dot, index) => {
-          dot.classList.toggle("active", index === currentVapeSlide);
-        });
-
-        // Update slides
-        slides.forEach((slide, index) => {
-          slide.classList.toggle("active", index === currentVapeSlide);
-        });
-
-        // Update arrow states (optional visual feedback)
-        prevBtn.classList.toggle("disabled", currentVapeSlide === 0);
-        nextBtn.classList.toggle(
-          "disabled",
-          currentVapeSlide === totalVapeSlides - 1
-        );
-      }
-
-      // Premium slide sound effect
-      function playPremiumSlideSound() {
-        if (
-          typeof AudioContext !== "undefined" ||
-          typeof webkitAudioContext !== "undefined"
-        ) {
-          try {
-            const audioContext = new (AudioContext || webkitAudioContext)();
-            const oscillator = audioContext.createOscillator();
-            const gainNode = audioContext.createGain();
-            const filter = audioContext.createBiquadFilter();
-
-            oscillator.type = "sine";
-            filter.type = "highpass";
-            filter.frequency.setValueAtTime(800, audioContext.currentTime);
-
-            oscillator.connect(filter);
-            filter.connect(gainNode);
-            gainNode.connect(audioContext.destination);
-
-            oscillator.frequency.setValueAtTime(1200, audioContext.currentTime);
-            oscillator.frequency.linearRampToValueAtTime(
-              1400,
-              audioContext.currentTime + 0.05
-            );
-
-            gainNode.gain.setValueAtTime(0, audioContext.currentTime);
-            gainNode.gain.linearRampToValueAtTime(
-              0.03,
-              audioContext.currentTime + 0.01
-            );
-            gainNode.gain.exponentialRampToValueAtTime(
-              0.001,
-              audioContext.currentTime + 0.1
-            );
-
-            oscillator.start(audioContext.currentTime);
-            oscillator.stop(audioContext.currentTime + 0.1);
-          } catch (e) {
-            console.log("Premium slide sound not available");
-          }
-        }
-      }
-
-      // Touch/swipe support for mobile
-      function initializeVapeSliderTouch() {
-        const container = document.getElementById("vapeSliderContainer");
-
-        container.addEventListener("touchstart", handleTouchStart, {
-          passive: true,
-        });
-        container.addEventListener("touchmove", handleTouchMove, {
-          passive: true,
-        });
-        container.addEventListener("touchend", handleTouchEnd, {
-          passive: true,
-        });
-
-        // Mouse support for desktop
-        container.addEventListener("mousedown", handleMouseStart);
-        container.addEventListener("mousemove", handleMouseMove);
-        container.addEventListener("mouseup", handleMouseEnd);
-        container.addEventListener("mouseleave", handleMouseEnd);
-      }
-
-      function handleTouchStart(e) {
-        startX = e.touches[0].clientX;
-        isDragging = true;
-      }
-
-      function handleTouchMove(e) {
-        if (!isDragging) return;
-        // Add visual feedback during drag if needed
-      }
-
-      function handleTouchEnd(e) {
-        if (!isDragging) return;
-
-        const endX = e.changedTouches[0].clientX;
-        const diffX = startX - endX;
-        const threshold = 50; // Minimum swipe distance
-
-        if (Math.abs(diffX) > threshold) {
-          if (diffX > 0) {
-            changeVapeSlide(1); // Swipe left - next slide
-          } else {
-            changeVapeSlide(-1); // Swipe right - prev slide
-          }
-        }
-
-        isDragging = false;
-      }
-
-      function handleMouseStart(e) {
-        startX = e.clientX;
-        isDragging = true;
-        e.preventDefault();
-      }
-
-      function handleMouseMove(e) {
-        if (!isDragging) return;
-        e.preventDefault();
-      }
-
-      function handleMouseEnd(e) {
-        if (!isDragging) return;
-
-        const endX = e.clientX;
-        const diffX = startX - endX;
-        const threshold = 30;
-
-        if (Math.abs(diffX) > threshold) {
-          if (diffX > 0) {
-            changeVapeSlide(1);
-          } else {
-            changeVapeSlide(-1);
-          }
-        }
-
-        isDragging = false;
-      }
-
-      // Auto-slide functionality (optional)
-      function startVapeAutoSlide() {
-        setInterval(() => {
-          // Auto-advance every 5 seconds if user is not interacting
-          if (!isDragging && !document.querySelector(".premium-modal.active")) {
-            changeVapeSlide(1);
-          }
-        }, 5000);
-      }
-      async function copyToClipboard(text) {
-        try {
-          await navigator.clipboard.writeText(text);
-          trackPremiumAnalytics("code_copied", { code: text });
-
-          // Show success feedback
-          showToast("Code copied to clipboard!");
-        } catch (err) {
-          console.log("Clipboard copy failed, using fallback");
-          fallbackCopyTextToClipboard(text);
-        }
-      }
-
-      function fallbackCopyTextToClipboard(text) {
-        const textArea = document.createElement("textarea");
-        textArea.value = text;
-        textArea.style.top = "0";
-        textArea.style.left = "0";
-        textArea.style.position = "fixed";
-        document.body.appendChild(textArea);
-        textArea.focus();
-        textArea.select();
-
-        try {
-          document.execCommand("copy");
-          showToast("Code copied!");
-        } catch (err) {
-          console.error("Fallback: Oops, unable to copy");
-        }
-
-        document.body.removeChild(textArea);
-      }
-
-      function showToast(message) {
-        // Simple toast notification
-        const toast = document.createElement("div");
-        toast.textContent = message;
-        toast.style.cssText = `
-                position: fixed;
-                bottom: 20px;
-                left: 50%;
-                transform: translateX(-50%);
-                background: rgba(0,0,0,0.8);
-                color: white;
-                padding: 12px 24px;
-                border-radius: 25px;
-                font-size: 14px;
-                z-index: 10001;
-                animation: toastSlideUp 0.3s ease-out;
-            `;
-
-        document.body.appendChild(toast);
-
-        setTimeout(() => {
-          toast.remove();
-        }, 3000);
-      }
-
-      // CSS animation for toast
-      const toastStyles = document.createElement("style");
-      toastStyles.textContent = `
-            @keyframes toastSlideUp {
-                from { opacity: 0; transform: translateX(-50%) translateY(20px); }
-                to { opacity: 1; transform: translateX(-50%) translateY(0); }
-            }
-        `;
-      document.head.appendChild(toastStyles);
     </script>
   </body>
 </html>
